@@ -8,7 +8,7 @@ public class TV {
     private boolean estado;
     private int volumen;
     private Control control;
-    private static int numTV = 0;
+    private static int numTV;
     
     
     //Sertters
@@ -51,7 +51,7 @@ public class TV {
     public Control getControl() {
         return control;
     }
-    public int getNumTV(){
+    public static int getNumTV(){
         return numTV;
     }
 
@@ -66,7 +66,6 @@ public class TV {
     }
 
     //Encendido, apagado y estado del TV
-
     public void turnOn(){
         estado = true;
     }
@@ -78,7 +77,6 @@ public class TV {
     }
 
     //Cambiar canales
-
     public void canalUp(){
         if(estado && (1<= canal) && (canal <120)){
             canal++;
@@ -92,7 +90,6 @@ public class TV {
 
 
     //Cambiar volumen
-
     public void volumenUp(){
         if(estado && (0<= volumen) && (volumen <7)){
             volumen++;
