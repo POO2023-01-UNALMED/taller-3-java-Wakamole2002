@@ -10,6 +10,7 @@ public class TV {
     private Control control;
     private static int numTV = 0;
     
+    
     //Sertters
     public void setMarca(Marca marca) {
         this.marca = marca;
@@ -19,6 +20,9 @@ public class TV {
     }
     public void setControl(Control control) {
         this.control = control;
+    }
+    public static void setNumTV(int numTV) {
+        TV.numTV = numTV;
     }
     public void setVolumen(int volumen) {
         if(estado && (0<= volumen) && (volumen <=7)){
@@ -47,7 +51,7 @@ public class TV {
     public Control getControl() {
         return control;
     }
-    public int getNumTv(){
+    public int getNumTV(){
         return numTV;
     }
 
